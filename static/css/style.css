@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  scrollbar-width: none;
+  box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+  width: 0em;
+}
+
+html {
+  font-size: 13px;
+  height: 100%;
+  overflow: auto;
+}
+
+body {
+  height: 100%;
+  font-family: "Averta CY", sans-serif;
+}
+
+.cursor {
+  height: 1rem;
+  width: 1rem;
+  display: none;
+  position: absolute;
+  border-radius: 100vw;
+  background-color: #000;
+  z-index: -1;
+  transition: background-color 0.6s, border 0.6s, height 0.6s, width 0.6s, transform 0.1s;
+}
+
+.main-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.scroll-content {
+  padding: 2%;
+  border-radius: 0.5em;
+  transform: none;
+  will-change: transform;
+  transition: transform 1s ease;
+}
+.scroll-content p {
+  text-align: justify;
+  font-size: 1.4em;
+  line-height: 150%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 300;
+}/*# sourceMappingURL=style.css.map */

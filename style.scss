@@ -1,0 +1,67 @@
+// Page Styling
+$sleepiest:#893596;
+$nana:#fbd6d5;
+$ulesson:#fb7554;
+$flipaclip:#fb5e84;
+$riyadh:#93c252;
+$ferrumpipe:#a6d3c1;
+$white:#fefeff;
+$black:#000;
+* {
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none;
+    box-sizing: border-box;
+    &::-webkit-scrollbar {
+        width: 0em;
+    }
+}
+html {
+    font-size: 13px;
+    height: 100%;
+    overflow: auto;
+}
+body {
+    height: 100%;
+    font-family: "Averta CY",sans-serif;
+}
+
+// Individual Styling Classes
+
+// Cursor Styling
+.cursor {
+    height: 1rem;
+    width: 1rem;
+    display: none;
+    position: absolute;
+    border-radius: 100vw;
+    background-color: $black;
+    z-index: -1;
+    transition: background-color 0.6s, border 0.6s, height 0.6s, width 0.6s, transform 0.1s;
+}
+
+// Actual Page Styling
+.main-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    // overflow-x: hidden;
+    // overflow-y: scroll;
+}
+.scroll-content {
+    padding: 2%;
+    border-radius: 0.5em;
+    -webkit-transform: none;
+    transform: none;
+    will-change: transform;
+    transition: transform 1s ease;
+    p {
+        text-align: justify;
+        font-size: 1.4em;
+        line-height: 150%;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $black;
+        font-weight: 300;
+    }
+}
