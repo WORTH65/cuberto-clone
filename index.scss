@@ -352,7 +352,7 @@ a {
             background: black;
             opacity: 0;
             width: 200px;
-            transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+            transition: opacity 1s ease-out;
             cursor: pointer;
 
         }
@@ -395,9 +395,6 @@ a {
                 font-size: .3em;
                 color: grey;
                 padding-top: 5em;
-
-
-
             }
 
 
