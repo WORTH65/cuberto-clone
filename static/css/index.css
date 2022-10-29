@@ -298,6 +298,7 @@ a {
   margin-left: 7em;
   font-weight: 700;
   font-size: 1.3em;
+  cursor: pointer;
 }
 .nav_box p:after {
   content: "";
@@ -309,25 +310,6 @@ a {
   height: 1px;
   background: rgba(0, 0, 0, 0.3);
   width: 200px;
-}
-.nav_box p:before {
-  content: "";
-  display: block;
-  position: relative;
-  top: 22.5px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1px;
-  background: black;
-  opacity: 0;
-  width: 200px;
-  transition: opacity 1s ease-out;
-  cursor: pointer;
-}
-.nav_box p:before:hover {
-  opacity: 1;
-  transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .nav_box .nav_content {
   display: flex;
@@ -367,6 +349,15 @@ a {
   font-weight: 600;
   margin-bottom: 0;
   color: grey;
+}
+
+.pkadiv {
+  width: 200px;
+  height: 1px;
+  background-color: black;
+  margin-left: 9rem;
+  transform: scale(0);
+  transition: transform 0.3s ease-out;
 }
 
 .-open {

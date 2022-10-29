@@ -31,6 +31,16 @@ const line1 = document.querySelector(".b1");
 const line2 = document.querySelector(".b2");
 const navBox = document.querySelector(".nav_box");
 const mainContainer = document.querySelector(".main-container");
+const itachi = document.querySelector(".itachi");
+const pkadiv = document.querySelector(".pkadiv");
+itachi.addEventListener("mouseover", () => {
+    pkadiv.style.transform = "scale(1)";
+})
+itachi.addEventListener("mouseout", () => {
+    pkadiv.style.transform = "scale(0)";
+})
+
+
 
 // console.log(line1, line2, hamburger);
 
