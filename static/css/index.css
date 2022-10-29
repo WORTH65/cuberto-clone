@@ -185,28 +185,33 @@ a {
 
 .hamburger {
   position: absolute;
-  top: 5.1em;
-  right: 3.2em;
-  width: 30px;
-  height: 14px;
+  padding-top: 1em;
+  top: 4.3em;
+  right: 2.4em;
+  width: 50px;
+  height: 50px;
   z-index: 1700;
   cursor: pointer;
+  border-radius: 50%;
 }
 .hamburger .b1 {
   color: black;
   background-color: #000;
   position: absolute;
-  top: 8px;
+  top: 21px;
+  left: 13px;
   height: 2px;
-  width: 30px;
+  width: 25px;
   transform-origin: bottom left;
   transition: transform 0.5s ease-out;
 }
 .hamburger .b2 {
   background-color: #000;
   position: absolute;
+  top: 13px;
+  left: 13px;
   height: 2px;
-  width: 30px;
+  width: 25px;
   transform-origin: center;
   transition: transform 0.5s ease-out;
 }
@@ -230,6 +235,16 @@ a {
           animation-name: mymove;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
+}
+
+.hamburger:hover {
+  background-color: black;
+}
+.hamburger:hover .b1 {
+  background-color: white;
+}
+.hamburger:hover .b2 {
+  background-color: white;
 }
 
 @-webkit-keyframes mymove {
@@ -261,6 +276,105 @@ a {
     width: 35px;
   }
 }
+/* navmenu */
+.background-light {
+  opacity: 0.4;
+}
+
+.nav_box {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  height: 100vh;
+  z-index: 400;
+  background-color: white;
+  opacity: 0.2;
+  margin-right: -50vw;
+  transition: opacity 0.5s, margin-right 0.8s;
+}
+.nav_box p {
+  margin-top: 3em;
+  margin-left: 7em;
+  font-weight: 700;
+  font-size: 1.3em;
+}
+.nav_box p:after {
+  content: "";
+  display: block;
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.3);
+  width: 200px;
+}
+.nav_box p:before {
+  content: "";
+  display: block;
+  position: relative;
+  top: 22.5px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: black;
+  opacity: 0;
+  width: 200px;
+  transition: opacity 1s ease-out;
+  cursor: pointer;
+}
+.nav_box p:before:hover {
+  opacity: 1;
+  transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.nav_box .nav_content {
+  display: flex;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.nav_box .nav_content .nav_menu {
+  list-style: none;
+  font-size: 4em;
+  font-weight: 600;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.nav_box .nav_content .nav_menu li#menu {
+  font-size: 0.3em;
+  color: grey;
+  padding-top: 5em;
+}
+.nav_box .nav_content .nav_socials {
+  list-style: none;
+  font-size: 1.5em;
+  font-weight: 600;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.nav_box .nav_content .nav_socials li {
+  margin-top: 1em;
+}
+.nav_box .nav_content .nav_socials li#social {
+  font-size: 0.7em;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: grey;
+}
+
+.-open {
+  opacity: 1;
+  margin-right: 0;
+  transition: opacity 0.5s, margin-right 0.8s;
+}
+
 .chat {
   position: absolute;
   bottom: 6.8em;

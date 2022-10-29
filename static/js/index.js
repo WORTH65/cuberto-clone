@@ -1,5 +1,6 @@
 // Showreel video handlers
-function startShow() {
+function
+    artShow() {
     document.querySelector('.showreel-video').style.zIndex = 333;
     document.querySelector('.showreel-video').style.opacity = 1;
     document.querySelector('.showreel-video video').currentTime = 0;
@@ -28,16 +29,25 @@ function cursorCloseVideo() {
 const hamburger = document.querySelector(".hamburger");
 const line1 = document.querySelector(".b1");
 const line2 = document.querySelector(".b2");
+const navBox = document.querySelector(".nav_box");
+const mainContainer = document.querySelector(".main-container");
 
 // console.log(line1, line2, hamburger);
 
 hamburger.addEventListener("click", () => {
     toggleSidebar();
+    navbarToggle();
 })
 
 function toggleSidebar() {
     line1.classList.toggle("openb1");
     line2.classList.toggle("openb2");
+}
+function navbarToggle() {
+    navBox.classList.toggle("-open");
+    mainContainer.classList.toggle("background-light");
+
+
 }
 // /Hamburger Icon Logic
 
@@ -88,3 +98,7 @@ function cursorDefault() {
     }
     cursor.innerHTML = '';
 }
+
+
+
+
